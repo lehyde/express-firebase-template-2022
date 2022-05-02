@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Welcome to MiM' });
 });
 
 /* GET about page. */
@@ -11,8 +11,8 @@ router.get('/about', function(req, res, next) {
   res.render('about');
 });
 
-/* GET hello page. */
-router.get('/hello', function(req, res, next) {
+/* GET testimonial page. */
+router.get('/testimonials', function(req, res, next) {
   console.log("URL PARAMS:", req.query)
   var name = req.query.name || "World" // double pipes is an OR operator that allows us to use a default value if the url params are null / not specified
   var message = "Hello, " + name
@@ -21,8 +21,3 @@ router.get('/hello', function(req, res, next) {
 
 module.exports = router;
 
-
-/* GET travel page. */
-router.get('/travel', function(req, res, next) {
-  res.render('travel');
-});

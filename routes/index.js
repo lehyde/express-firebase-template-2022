@@ -20,3 +20,9 @@ router.get('/hello', function(req, res, next) {
 });
 
 module.exports = router;
+
+
+/* GET travel page. */
+router.get('/travel', function(req, res, next) {
+  res.render('travel');
+});
